@@ -23,12 +23,12 @@ body {
     font-family: Open+Sans, sans-serif;
 }
 
-/* Eliminar la decoración de los hipervínculos: */
+/* Eliminar la decoraciÃ³n de los hipervÃ­nculos: */
 a {
     text-decoration: none;
 }
 
-/* Agregar color y tamaño de fuente a la etiqueta <h2></h2> */
+/* Agregar color y tamaÃ±o de fuente a la etiqueta <h2></h2> */
 h2 {
     color: var(--secondary-color);
     font-size: 2vw;
@@ -46,7 +46,7 @@ h2 {
 }
 
 
-/* Este ejemplo se usa en la página de las películas 
+/* Este ejemplo se usa en la pï¿½gina de las pelï¿½culas 
 #logo:hover {
     animation: tilt-n-move-shaking 0.25s infinite;
 }
@@ -76,11 +76,11 @@ h2 {
 */
 
 
-/* Selector por id que identifica la sección de recoleta. */
+/* Selector por id que identifica la secciï¿½n de recoleta. */
 #recoleta {
-    background-image: url('../img/banner-bg.jpg');
+    background-image: url('../imgs/banner-bg.jpg');
     background-size: cover;
-    /* determina cómo se ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+    /* determina cï¿½mo se ajusta el tamaï¿½o de la imagen de fondo para cubrir completamente el contenedor */
     background-position: center;
     /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
     height: 850px;
@@ -89,7 +89,7 @@ h2 {
 }
 
 
-/* Selector id para la sección de Top Rated, rooms más pedidos */
+/* Selector id para la secciï¿½n de Top Rated, rooms mï¿½s pedidos */
 #top-rated {
     margin: 50px 0px;
 }
@@ -131,7 +131,7 @@ h2 {
     width: 100%;
 }
 
-/* Estilo para Search  está en el site de las pelis pero no sé si lo usaremos en este site */
+/* Estilo para Search  estï¿½ en el site de las pelis pero no sï¿½ si lo usaremos en este site */
 /*#search{
     height: 300px;
     display: flex;
@@ -142,15 +142,15 @@ h2 {
 */
 
 .logo img {
-    max-width: 150px; /* Establece el ancho máximo de la imagen */
-    max-height: 100px; /* Establece la altura máxima de la imagen */
+    max-width: 150px; /* Establece el ancho mï¿½ximo de la imagen */
+    max-height: 100px; /* Establece la altura mï¿½xima de la imagen */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between; /* Distribuye los elementos horizontalmente */
     align-items: center; /* Centra verticalmente los elementos */
-    padding: 10px; /* Añade espacio interno */
+    padding: 10px; /* Aï¿½ade espacio interno */
 }
 
 .nav-links {
@@ -160,8 +160,8 @@ h2 {
 }
 
 .nav-links li {
-    display: inline-block; /* Hace que los elementos de la lista se muestren en línea */
-    margin-left: 20px; /* Añade un margen entre los elementos de la lista */
+    display: inline-block; /* Hace que los elementos de la lista se muestren en lï¿½nea */
+    margin-left: 20px; /* Aï¿½ade un margen entre los elementos de la lista */
 }
 
 .nav-links li:first-child {
@@ -169,44 +169,60 @@ h2 {
 }
 
 .nav-links li a {
-    color:var(--bg-color); /* Establece el color del texto a blanco */
+    color:var(--third-bis-color); /* Establece el color del texto */
     text-decoration: none;
-    transition: color 0.3s; /* Agrega una transición suave para el cambio de color */
+    transition: color 0.3s; /* Agrega una transiciï¿½n suave para el cambio de color */
 }
 
-.nav-links li a:hover {
-    color: var(--third-color); /* Cambia el color del texto a gris cuando pasas el mouse sobre el enlace */
+/* .nav-links li a:hover {
+    color: var(--third-color); /* Cambia el color del texto a gris cuando pasas el mouse sobre el enlace 
+}*/
+
+
+/* Estilo para los hipervï¿½nculos del menu que se usï¿½ en el ejemplo del site de las pelï¿½culas
+.nav-links a {
+    text-decoration: none;
+    color: var(--third-color);
 }
+*/
+/* Hover para los links al pasar el mouse */
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+
+
 
 .room-item-img {
     width: 100%;
     /* height: 300px; */
     object-fit: cover;
-    /* Especifica cómo debe ajustarse y escalarse una imagen o un video. El valor cover asegura que el contenido se ajuste al contenedor manteniendo su proporción y cubriendo todo el espacio disponible. */
+    /* Especifica cï¿½mo debe ajustarse y escalarse una imagen o un video. El valor cover asegura que el contenido se ajuste al contenedor manteniendo su proporciï¿½n y cubriendo todo el espacio disponible. */
     -o-object-fit: cover;
     /* Este prefijo es necesario para que Opera pueda reconocer y aplicar la propiedad. */
 }
 
-/* Estilo que se usará¡ desde JavaScript para que al recorrer la página el encabezado cambie de color. */
+/* Estilo que se usarï¿½ desde JavaScript para que al recorrer la pï¿½gina el encabezado cambie de color. */
 .scrolled {
     background-color: var(--third-color);
 }
 
 
-/* Modificaremos el color de fondo, color de fuente, posición del encabezado, ancho y profundidad. */
+/* Modificaremos el color de fondo, color de fuente, posiciï¿½n del encabezado, ancho y profundidad. */
 .header {
     background-color: transparent;
     color: #FFF;
     position: fixed;
-    /* Se utiliza para posicionar un elemento de forma fija en relación con la ventana del navegador, lo que significa que el elemento permanece en la misma posiciÃ³n, incluso cuando se desplaza la pÃ¡gina. */
+    /* Se utiliza para posicionar un elemento de forma fija en relaciï¿½n con la ventana del navegador, lo que significa que el elemento permanece en la misma posiciÃ³n, incluso cuando se desplaza la pÃ¡gina. */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
-    /* Se utiliza comunmente en situaciones donde tienes elementos superpuestos, como menúes desplegables, ventanas emergentes, elementos flotantes, etc. Al ajustar el z-index, puedes controlar qué elementos aparecen en la parte superior y cuáles quedan ocultos detrás de otros. */
+    /* Se utiliza comunmente en situaciones donde tienes elementos superpuestos, como menï¿½es desplegables, ventanas emergentes, elementos flotantes, etc. Al ajustar el z-index, puedes controlar quï¿½ elementos aparecen en la parte superior y cuï¿½les quedan ocultos detrï¿½s de otros. */
 }
 
-/* Estilos para el botón. */
+/* Estilos para el botï¿½n. */
 .btn-reservas {
     background-color: var(--primary-color);
     padding: 10px;
@@ -235,7 +251,7 @@ h2 {
 }
 
 
-/* Estilo para la barra de búsqueda 
+/* Estilo para la barra de bï¿½squeda 
 .input-search {
     background-color: var(--bg-input-color);
     border: 2px solid white;
@@ -252,66 +268,91 @@ h2 {
 }
 */
 
-/* Estilo para el detalle de los ítems */
+/* Estilo para el detalle de los ï¿½tems */
 .room-item-detail {
     bottom: -100%;
-    /* Se utiliza para posicionar un elemento en relación con su contenedor padre moviéndolo hacia abajo, fuera de la vista, exactamente un 100% de la altura del contenedor. */
+    /* Se utiliza para posicionar un elemento en relaciï¿½n con su contenedor padre moviï¿½ndolo hacia abajo, fuera de la vista, exactamente un 100% de la altura del contenedor. */
     padding: 30px;
     max-height: 100%;
     overflow-y: auto;
-    /* Se utiliza para controlar cómo se maneja el desbordamiento vertical del contenido dentro de un elemento. auto permite que aparezcan barras de desplazamiento solo cuando el contenido excede el tamaño del contenedor en el eje vertical. */
+    /* Se utiliza para controlar cï¿½mo se maneja el desbordamiento vertical del contenido dentro de un elemento. auto permite que aparezcan barras de desplazamiento solo cuando el contenido excede el tamaï¿½o del contenedor en el eje vertical. */
     line-height: 15px;
-    /* Esta propiedad afecta al espacio vertical entre líneas de texto dentro del elemento. */
+    /* Esta propiedad afecta al espacio vertical entre lï¿½neas de texto dentro del elemento. */
     position: absolute;
-    /* Establece la posición del elemento de manera absoluta en relación con su contenedor padre posicionado. */
+    /* Establece la posiciï¿½n del elemento de manera absoluta en relaciï¿½n con su contenedor padre posicionado. */
     background-color: var(--third-bis-color);
     box-sizing: border-box;
-    /* Define cómo se calcula el tamaño total de un elemento, incluyendo su contenido, relleno (padding) y bordes. */
+    /* Define cï¿½mo se calcula el tamaï¿½o total de un elemento, incluyendo su contenido, relleno (padding) y bordes. */
     transition: bottom 0.4s ease-in-out;
     width: 100%;
 	height: 100%;
 }
 
-/* Estilo para el título  */
+/* Estilo para el tï¿½tulo  
 .room-item-detail-title {
     color: white;
     margin: 5px 0px 0px 0px;
     line-height: 1.2em;
-}
+}*/
 
-/* Estilo para el subtítulo  */
+/* Estilo para el texto "Recoleta" */
+.room-item-detail-title {
+    color: var(--primary-color);
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); /* Centra el texto horizontal y verticalmente */
+    opacity: 0; /* El texto estarÃ¡ oculto inicialmente */
+    transition: opacity 0.3s; /* TransiciÃ³n suave para mostrar el texto */
+}
+/* Estilo para el subtï¿½tulo  
 .room-item-detail-subtitle {
     color: white;
     font-size: 8px;
     margin: 3px 0px;
+}*/
+/* Estilo para el texto "la mejor suite" */
+.room-item-detail-text {
+    color: var(--primary-color);
+    margin: 5px 0 0; /* Espacio superior para separarlo del tÃ­tulo */
 }
 
+/* Ocultar el texto "la mejor suite" inicialmente */
+.room-item-detail-text {
+    opacity: 0;
+    transition: opacity 0.3s; /* TransiciÃ³n suave para mostrar y ocultar el texto */
+}
 
-/* Estilo para los cuartos más pedidos */
+/* Mostrar el texto "la mejor suite" al hacer hover sobre la habitaciÃ³n */
+.room-item:hover .room-item-detail-text {
+    opacity: 1; /* Mostrar el texto */
+}
+
+/* Estilo para los cuartos mï¿½s pedidos */
 .wrapper {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
     /* Se utiliza para aplicar sombras a un elemento. El primer valor 0 representa el desplazamiento horizontal de la sombra. El segundo valor 2px representa el desplazamiento vertical de la sombra. El tercer valor 8px indica el desenfoque o difuminado de la sombra. . rgba(0,0,0,.1) define el color y la opacidad de la sombra. En este caso, se trata de un tono negro (0,0,0) con una opacidad del 10% (0.1).*/
     border-radius: 10px;
     width: 100%;
     min-height: calc(500px*1.5);
-    /* Establece la altura mínima del elemento en 225 px, asegurando que, aunque el contenido no sea suficiente para alcanzar esa altura, el elemento nunca se mostrarÃ¡ con una altura menor a 225 px. */
+    /* Establece la altura mï¿½nima del elemento en 225 px, asegurando que, aunque el contenido no sea suficiente para alcanzar esa altura, el elemento nunca se mostrarÃ¡ con una altura menor a 225 px. */
     height: calc(500px*1.5);
     overflow: hidden;
-    /* Se oculta el contenido que sobresale más allá¡ de los lím del contenedor. */
+    /* Se oculta el contenido que sobresale mï¿½s allï¿½ de los lï¿½m del contenedor. */
 }
 
 
-/* Estilo para las imgs los cuartos más pedidos */
+/* Estilo para las imgs los cuartos mï¿½s pedidos */
 .room-item-img-v2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Se utiliza para ajustar el tamaño del elemento para que llene completamente el contenedor. */
+    /* Se utiliza para ajustar el tamaï¿½o del elemento para que llene completamente el contenedor. */
     -o-object-fit: cover;
     /* Para que se pueda visualizar en Opera */
 }
 
-/* Estilo para el detalle de los cuartos más pedidos */
+/* Estilo para el detalle de los cuartos mï¿½s pedidos */
 .room-item-detail-v2 {
     align-items: center;
     display: flex;
@@ -319,14 +360,14 @@ h2 {
     justify-content: flex-end;
 }
 
-/* Estilo para el título de los cuartos más pedidos*/
+/* Estilo para el tï¿½tulo de los cuartos mï¿½s pedidos*/
 .room-item-detail-title-v2 {
     color: white;
     font-weight: bold;
     margin: 5px 0px 0px 0px;
 }
 
-/* Estilo para el subtítulo de los cuartos más pedidos*/
+/* Estilo para el subtï¿½tulo de los cuartos mï¿½s pedidos*/
 .room-item-detail-subtitle-v2 {
     color: white;
     font-size: 12px;
@@ -334,25 +375,14 @@ h2 {
 }
 
 
-/* Estilo para los hipervínculos del menu que se usó en el ejemplo del site de las películas
-.nav-links a {
-    text-decoration: none;
-    color: var(--third-color);
-}
-*/
-/* Hover para los links al pasar el mouse */
-.nav-links a:hover {
-    color: var(--secondary-color);
-}
-
-/* Hover para el botón de Reservas*/
+/* Hover para el botï¿½n de Reservas*/
 .btn-room:hover {
     color: var(--primary-color) !important;
     border: 2px solid var(--bg-color);
 }
 
 
-/* Estilos con selectores descendientes para las etiquetas de título y subtítulo del banner */
+/* Estilos con selectores descendientes para las etiquetas de tï¿½tulo y subtï¿½tulo del banner */
 .card-recoleta h1 {
     color: #FFF;
     font-size: 4vw;
@@ -362,31 +392,55 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Estilo para los cuartos q son más pedidos */
+/* Estilo para los cuartos q son mï¿½s pedidos */
 .room-item {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    display: inline-block;
     width: 100%;
-    /* height: 300px;*/
-    font-size: 20px;
     cursor: pointer;
+    }
+    /* height: 300px;
+    display: inline-block;
+    font-size: 20px;
     transition: all 450ms;
     -webkit-transform-origin: center left;
     transform-origin: center left;
+
+/* Estilo para la superposiciÃ³n */
+.room-item::before {
+    content: ''; /* Contenido generado antes del contenido real */
+    position: absolute;
+    bottom: 0; /* Desde abajo de la imagen */
+    left: 0;
+    width: 100%;
+    height: 0; /* Altura inicial cero */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo gris con opacidad */
+    transition: height 0.3s; /* TransiciÃ³n suave para el cambio de altura */
 }
 
+
+
+/* Estilo para el texto "Recoleta" cuando se pasa el mouse sobre la habitaciÃ³n */
+.room-item:hover .room-item-detail-title {
+    opacity: 1; /* Mostrar el texto */
+}
+
+/* Estilo para el hover */
+.room-item:hover::before {
+    height: 50%; /* Aumenta la altura de la superposiciÃ³n al 50% */
+}
+/* AcÃ¡ termina Estilo para el texto "Recoleta" */
 /* Estilo que se activa al pasar el cursor del mouse sobre el item */
 /* .room-item:hover cuando el cursor estÃ¡ sobre un elemento con la clase .room-item, se aplica una opacidad del 90% (0.9), lo que hace que el elemento se vuelva un poco mÃ¡s transparente. */
 .room-item:hover {
     opacity: 0.9;
 }
 
-/* Cambia la posición vertical (bottom) del elemento .room-item-detail, moviéndolo hacia abajo, para revelar más información o detalles sobre el elemento de la suite. */
-.room-item:hover .movie-item-detail {
+/* Cambia la posiciï¿½n vertical (bottom) del elemento .room-item-detail, moviï¿½ndolo hacia abajo, para revelar mï¿½s informaciï¿½n o detalles sobre el elemento de la suite. 
+.room-item:hover .room-item-detail {
     bottom: 0;
-}
+}*/
 
 /* Agrega contenido adicional a un elemento */
 .room-item-detail-subtitle::after {
@@ -394,7 +448,7 @@ h2 {
 }
 
 
-/* Estilo para cambiar el color que se muestran en los cuartos más pedidos */
+/* Estilo para cambiar el color que se muestran en los cuartos mï¿½s pedidos */
 .room-item-detail-title-v2:hover {
     color: var(--primary-color);
 }
