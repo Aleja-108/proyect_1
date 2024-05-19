@@ -5,7 +5,7 @@
   --primary-color: #180255;
   --secondary-color: #070c12;
   --third-color: #525963;
-  --third-bis-color: #818181;
+  --third-bis-color: #bebcbc;
   --bg-input-color: #8a8db2;
 }
 
@@ -30,10 +30,10 @@ body {
   font-family: "garamond",  system-ui, -apple-system;
   font-size: 1.6rem;
   background: var(--bg-color);
-  color: var(--secondary-color);
+  color: var(--third-color);
   display: grid;
   place-content: center;
-  height: 100vh;
+  height: auto;
  
 }
 
@@ -47,13 +47,19 @@ a {
   color: var(--primary-color);
 }
 
+#suites {
+    height: 900px;
+}
+
 .room {
   max-width: 1200px;
   background: var(--third-bis-color);
-  border: 1px solid #343637;
+  border: 1px solid var(--third-bis-color);
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  margin:0 20px 30px 20px ;
+  
   
 }
 .room .image-container {
@@ -87,7 +93,7 @@ a {
 
 .room-footer {
   padding: 2rem 2rem 3.5rem 2rem;
-  color: rgb(236, 232, 225);
+  color: var(--bg-color));
   transition: all 0.3s ease;
 }
 
@@ -133,8 +139,8 @@ a {
 }
 
 .room:hover .room-footer {
-  background: #ffffff;
-  color: rgb(56, 62, 58);
+  background: var(--bg-color);
+  color: var(--third-color);
 }
 
 .room:hover span {
