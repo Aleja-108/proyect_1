@@ -2,121 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./static/css/style.css" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="./static/imgs/favicon.ico">
 
-    <!-- Script de Fontawesome  
-    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous">
-
-    <!-- CSS -->          
-    <link rel="stylesheet" href="./static/css/style.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="./static/imgs/favicon.ico">
-
-    <title>GOBAires</title>
+  <title>GOBAires</title>
 </head>
 
 <body>
-    <!-- Encabezado -->
-    <header class="header">
+  <section id="suites">
+    <div class="room">
+      <div class="image-container">
+        <img src="./static/imgs/room25.jpg" alt="a" />
+      </div>
+      <div class="room-footer">
 
-        <nav class="navbar">
-            <!-- Logo -->
-            <div class="logo">
-                
-					<img src="./static/imgs/logo_go_baires.png" alt="GOBAires Logo" >
-                    <!-- Más adelante se aplicarán estilos específicos al texto y se agregará un ícono. Éste es el ejemplo del site d las pelis -->
-                    <!-- <i class="fas fa-film"></i> -->
-                    <!--<span class="logo-text">GOBAires</span>-->
-                
-            </div>
-
-            <!-- Hipervínculos del Menú -->
-            <ul class="nav-links">
-                <li><a href="">Home</a></li>
-                <li><a href="#recoleta">Suites</a></li>
-                <li><a href="#">Resto Bar</a></li>
-                <li><a href="#">Spa</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./templates/reservas.html" class="btn-reservas">Reservas</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Contenido -->
-    <main>
-        
-        <!-- banner: una sección prominente en la parte superior de
-        una página que puede contener información destacada, como anuncios,
-        mensajes importantes, o un diseño gráfico distintivo. -->
-        <section id="recoleta">
-            
-            <div class="container card-recoleta">
-                <h1></h1>
-                <h2></h2>
-                <!--<a href="./templates/reservas.html" class="btn-reservas">Reservas</a>-->
-            </div>
-        </section>
-
-        <!-- search: para implementar una barra de búsqueda en la página web 
-        <section id="search" class="container">
-            <h2 class="search-title"></h2>
-            <input type="text" class="input-search" placeholder="Buscar...">
-        </section>-->
-
-        <!-- popular: mostrar imágenes de las peliculas con tendencia hoy -->
-        <section id="best">
-            <!-- División contenedora del título e imágenes -->
-            <div class="container">
-                <h2></h2>
-                <div id="list-best">
-                  <div class="room-item"> <a href=""> <img src="./static/imgs/room25.jpg" alt="" class="room-item-img">
-                    <div class="room-item-detail">
-                      <p class="room-item-detail-title">Recoleta</p>
-                      <p class="room-item-detail-text">La mejor suite</p>
-                     <!-- <p class="room-item-detail-subtitle"></p>-->
-                    </div>
-                  </a> </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- top-rated:  los  más buscados-->
-        <section id="top-rated">
-            <!-- División contenedora del título e imágenes -->
-            <div class="container">
-                <h2></h2>
-                <div id="list-top-rated">
-                    <!-- Info de las películas: mismo formato para todas -->
-                    <div class="room-item-v2">
-                        <div class="wrapper"> <img src="./static/imgs/room22.jpg" alt="" class="room-item-img-v2"> 
-                        </div>
-                        
-                        <div class="room-item-detail-v2">
-                            <p class="room-item-detail-title-v2"></p>
-                            <!-- <p class="room-item-detail-subtitle-v2"></p>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Pie -->
-    <footer id="footer">
-        <a href="">Términos y condiciones</a>
-        <a href="">Preguntas frecuentes</a>
-        <a href="">Ayuda</a>
-    </footer>
-
+        <h3 class="room-png"><img src="./static/imgs/room_recoleta.png" alt=""></h3>
+        <p>
+          Our Recoleta Suite provides space and comfort for a relaxing visit. With a bathroom and living room area,
+          these suites have plenty of room for guests to unwind. Each suite features an in-room safe, two 42-inch LCD
+          televisions, and a mini-bar.
+        </p>
+        <a href="#" class="reservar">RESERVAS <span>&rarr;</span> </a>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
