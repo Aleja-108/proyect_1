@@ -1,538 +1,169 @@
-/* :root - Selector especial utilizado para definir variables personalizadas de CSS que se pueden reutilizar en todo el documento. */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 :root {
-    --bg-color: #ffffff;
-    /* Color de fondo */
-    --primary-color: #180255;
-    --secondary-color: #070c12;
-    --third-color: #525963;
-    --third-bis-color: #818181;
-    --bg-input-color: #8a8db2;
+  --bg-color: #ffffff;
+  /* Color de fondo */
+  --primary-color: #180255;
+  --secondary-color: #070c12;
+  --third-color: #525963;
+  --third-bis-color: #818181;
+  --bg-input-color: #8a8db2;
 }
 
-/* Selector de etiqueta para body donde aplica color de fondo. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--bg-color);
+}
+
+html {
+  font-size: 75%;
+}
+
 body {
-    background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  font-family: "garamond",  system-ui, -apple-system;
+  font-size: 1.6rem;
+  background: var(--bg-color);
+  color: var(--secondary-color);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+ 
 }
 
-
-/* Selector Universal */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Open+Sans, sans-serif;
+h3 {
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
-/* Eliminar la decoración de los hipervínculos: */
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
-/* Agregar color y tamaño de fuente a la etiqueta <h2></h2> */
-h2 {
-    color: var(--secondary-color);
-    font-size: 2vw;
-}
-
-/* Selector de id llamado logo para resaltar el texto en negrita */
-#logo {
-    font-weight: bold;
-}
-
-/* Selector descendiente */
-#logo a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-
-/* Este ejemplo se usa en la p�gina de las pel�culas 
-#logo:hover {
-    animation: tilt-n-move-shaking 0.25s infinite;
-}
-
-@keyframes tilt-n-move-shaking {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    25% {
-        transform: translate(5px, 5px) rotate(5deg);
-    }
-
-    50% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    75% {
-        transform: translate(-5px, 5px) rotate(-5deg);
-    }
-
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-}
-
-*/
-
-
-/* Selector por id que identifica la secci�n de recoleta. */
-#recoleta {
-    background-image: url('../imgs/banner-bg.jpg');
-    background-size: cover;
-    /* determina c�mo se ajusta el tama�o de la imagen de fondo para cubrir completamente el contenedor */
-    background-position: center;
-    /* coloca la imagen en el centro tanto horizontal como vertical del elemento contenedor */
-    height: 850px;
-    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
-    /* establece una sombra interna actúa como un filtro. */
-}
-
-
-/* Selector id para la secci�n de Top Rated, rooms m�s pedidos */
-#top-rated {
-    margin: 50px 0px;
-}
-
-/* Estilos para los id #best y #top rated */
-#best,
-#top-rated {
-    text-align: center;
-}
-
-#best h2,
-#top-rated h2 {
-    margin: 50px 0px;
-}
-
-
-/* Estilo para el footer */
-#footer a {
-    color: var(--bg-color);
-    cursor: pointer;
-    font-size: 14px;
-    padding-left: 30px;
-    text-decoration: none;
-}
-
-/* Estilo para el footer para cuando se pasa el mouse */
-#footer a:hover {
-    text-decoration: underline;
-    color: var(--secondary-color);
-}
-
-
-/* Estilo para el footer */
-#footer{
-    display: flex;
-    align-items: center;
-    background-color: var(--primary-color);
-    height: 100px;
-    width: 100%;
-}
-
-/* Estilo para Search  est� en el site de las pelis pero no s� si lo usaremos en este site */
-/*#search{
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
-.logo img {
-    max-width: 150px; /* Establece el ancho m�ximo de la imagen */
-    max-height: 100px; /* Establece la altura m�xima de la imagen */
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 10px; /* A�ade espacio interno */
-}
-
-.nav-links {
-    list-style-type: none; /* Quita los marcadores de lista */
-    padding: 0; /* Quita el espacio interno */
-    margin: 0; /* Quita el margen */
-}
-
-.nav-links li {
-    display: inline-block; /* Hace que los elementos de la lista se muestren en l�nea */
-    margin-left: 20px; /* A�ade un margen entre los elementos de la lista */
-}
-
-.nav-links li:first-child {
-    margin-left: 0; /* Quita el margen izquierdo del primer elemento de la lista */
-}
-
-.nav-links li a {
-    color:var(--third-bis-color); /* Establece el color del texto */
-    text-decoration: none;
-    transition: color 0.3s; /* Agrega una transici�n suave para el cambio de color */
-}
-
-/* .nav-links li a:hover {
-    color: var(--third-color); /* Cambia el color del texto a gris cuando pasas el mouse sobre el enlace 
-}*/
-
-
-/* Estilo para los hiperv�nculos del menu que se us� en el ejemplo del site de las pel�culas
-.nav-links a {
-    text-decoration: none;
-    color: var(--third-color);
-}
-*/
-/* Hover para los links al pasar el mouse */
-.nav-links a:hover {
-    color: var(--secondary-color);
-}
-
-
-
-
-
-.room-item-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    /* height: 300px; */
-    transition: transform 0.3s ease;
-    vertical-align: top; /* Alinea la imagen en la parte superior */
-    /* object-fit: cover;
-    Especifica c�mo debe ajustarse y escalarse una imagen o un video. El valor cover asegura que el contenido se ajuste al contenedor manteniendo su proporci�n y cubriendo todo el espacio disponible. */
-   /*  -o-object-fit: cover;
-    /* Este prefijo es necesario para que Opera pueda reconocer y aplicar la propiedad. */
-}
-
-/* Estilo que se usar� desde JavaScript para que al recorrer la p�gina el encabezado cambie de color. */
-.scrolled {
-    background-color: var(--third-color);
-}
-
-
-/* Modificaremos el color de fondo, color de fuente, posici�n del encabezado, ancho y profundidad. */
-.header {
-    background-color: transparent;
-    color: #FFF;
-    position: fixed;
-    /* Se utiliza para posicionar un elemento de forma fija en relaci�n con la ventana del navegador, lo que significa que el elemento permanece en la misma posición, incluso cuando se desplaza la página. */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    /* Se utiliza comunmente en situaciones donde tienes elementos superpuestos, como men�es desplegables, ventanas emergentes, elementos flotantes, etc. Al ajustar el z-index, puedes controlar qu� elementos aparecen en la parte superior y cu�les quedan ocultos detr�s de otros. */
-}
-
-/* Estilos para el bot�n. */
-.btn-reservas {
-    background-color: var(--primary-color);
-    padding: 10px;
-    /* Se aplica un espacio de 10 px a los cuatro lados (arriba, abajo, izquierda y derecha) del elemento. */
-    border-radius: 10px;
-    /* Se establece un radio de curvatura de 10 px para las esquinas del elemento. */
-    color: #FFF;
-    cursor: pointer;
-}
-
-
-/* Clase Container */
-.container {
-    max-width: 1200px;
-    margin: 120px auto;
-}
-
-
-/* Estilo para la tarjeta de recoleta */
-.card-recoleta {
-    margin: 0 auto;
-    /* Se utiliza comunmente para centrar horizontalmente un elemento dentro de su contenedor. */
-    text-align: center;
-    padding: 0px 160px;
-    /* Aplica un relleno de cero px en la parte superior e inferior del elemento y un relleno de 160 px en los lados izquierdo y derecho. */
-}
-
-
-/* Estilo para la barra de b�squeda 
-.input-search {
-    background-color: var(--bg-input-color);
-    border: 2px solid white;
-    border-radius: 25px;
-    color: white;
-    font-size: 16px;
-    height: 50px;
-    margin: 20px 0px;
-    outline: none;
-    /* Se utiliza para quitar o eliminar el contorno visible que se muestra alrededor de un elemento cuando este obtiene el foco o se selecciona. 
-    padding: 0px 20px;
-    width: 70%;
-    font-family: 'Open sans', sans-serif;
-}
-*/
-
-/* Estilo para el detalle de los �tems 
-.room-item-detail {
-   /* bottom: -100%;
-    /* Se utiliza para posicionar un elemento en relaci�n con su contenedor padre movi�ndolo hacia abajo, fuera de la vista, exactamente un 100% de la altura del contenedor. */
-    padding: 30px;
-    /* max-height: 100%;
-    overflow-y: auto;
-    /* Se utiliza para controlar c�mo se maneja el desbordamiento vertical del contenido dentro de un elemento. auto permite que aparezcan barras de desplazamiento solo cuando el contenido excede el tama�o del contenedor en el eje vertical. */
-    /* line-height: 15px;
-    /* Esta propiedad afecta al espacio vertical entre l�neas de texto dentro del elemento. */
-    position: absolute;
-    /* Establece la posici�n del elemento de manera absoluta en relaci�n con su contenedor padre posicionado. */
-    /* background-color: var(--third-bis-color);
-    /* box-sizing: border-box;
-    /* Define c�mo se calcula el tama�o total de un elemento, incluyendo su contenido, relleno (padding) y bordes. */
-    /* transition: bottom 0.4s ease-in-out;
-    width: 100%;
-	height: 100%;
-}
-
-/* Estilo inicial para el detalle de la habitación 
-.room-item-detail {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    width: 100%;
-    height: auto;
-    /*background-color: rgba(0, 0, 0, 0.5);  Fondo oscuro semitransparente */
-    /*max-height: 100%;
-    overflow-y: auto;
-    /* Se utiliza para controlar c�mo se maneja el desbordamiento vertical del contenido dentro de un elemento. auto permite que aparezcan barras de desplazamiento solo cuando el contenido excede el tama�o del contenedor en el eje vertical. */
-    /* line-height: 15px;
-    /* Esta propiedad afecta al espacio vertical entre l�neas de texto dentro del elemento. */
-    /* Establece la posici�n del elemento de manera absoluta en relaci�n con su contenedor padre posicionado. */
-    /*background-color: var(--third-bis-color);
-    box-sizing: border-box;
-    /* Define c�mo se calcula el tama�o total de un elemento, incluyendo su contenido, relleno (padding) y bordes. */
-    /*transition: bottom 0.4s ease-in-out;
-    /* transition: opacity 0.3s; /* Transición suave */
-    /* color: white;
-    opacity: 0; /* Ocultar inicialmente */
-    /* transition: opacity 0.3s, transform 0.3s; /* Agrega transición para suavizar el cambio */
-   /*  transform: translateY(100%); /* Posicionar fuera de la vista inicialmente */
-   /*  display: flex;
-   /* flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}*/
-
-.room-item-detail {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: var(--third-bis-color);
-    color: #fff;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(100%);
-  }
+.room {
+  max-width: 1200px;
+  background: var(--third-bis-color);
+  border: 1px solid #343637;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
   
-
-/* Estilo para mostrar el detalle cuando se hace hover */
-.room-item:hover .room-item-detail {
-    opacity: 1; /* Mostrar al hacer hover */
-    /transform: translateY(0);  Mover a la posición visible */
+}
+.room .image-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
 }
 
-/* Estilo para el t�tulo  
-.room-item-detail-title {
-    color: white;
-    margin: 5px 0px 0px 0px;
-    line-height: 1.2em;
-}*/
-
-
-.room-item:hover img {
-    transform: scale(1.1);
-  }
-
-
-/* Estilo para el texto "Recoleta" */
-.room-item-detail-title {
-    color: var(--primary-color);
-    /*position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%); /* Centra el texto horizontal y verticalmente */
-    /*opacity: 0; /* El texto estará oculto inicialmente */
-    /*transition: opacity 0.3s; /* Transición suave para mostrar el texto */
-    margin: 0.5rem 0;
-    font-size: 1.5rem;
-}
-/* Estilo para el subt�tulo  
-.room-item-detail-subtitle {
-    color: white;
-    font-size: 8px;
-    margin: 3px 0px;
-}*/
-/* Estilo para el texto "la mejor suite" */
-.room-item-detail-text {
-    color: var(--primary-color);
-    /* margin: 5px 0 0; Espacio superior para separarlo del título */
-    margin: 0;
-    padding: 20px;
-    /*font-size: 3  rem;
-    opacity: 0;
-    transition: opacity 0.3s;
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.7);*/
+.room img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Ocultar el texto "la mejor suite" inicialmente */
-.room-item-detail-text {
-    opacity: 0;
-    transition: opacity 0.3s; /* Transición suave para mostrar y ocultar el texto */
+.room:hover .image-container {
+  transform: scale(1.1);
 }
 
-
-
-/* Mostrar el texto "la mejor suite" al hacer hover sobre la habitación */
-.room-item:hover .room-item-detail-text,
-.room-item:hover .room-item-detail-title {
-    opacity: 1; /* Mostrar el texto */
+.room .image-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: #656172d8;
+  mix-blend-mode: multiply;
+  transform: translateX(-120%) skewX(-10deg);
+  transition: transform 0.3s ease-out;
 }
 
-/* Estilo para los cuartos m�s pedidos */
-.wrapper {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
-    /* Se utiliza para aplicar sombras a un elemento. El primer valor 0 representa el desplazamiento horizontal de la sombra. El segundo valor 2px representa el desplazamiento vertical de la sombra. El tercer valor 8px indica el desenfoque o difuminado de la sombra. . rgba(0,0,0,.1) define el color y la opacidad de la sombra. En este caso, se trata de un tono negro (0,0,0) con una opacidad del 10% (0.1).*/
-    border-radius: 10px;
-    width: 100%;
-    min-height: calc(500px*1.5);
-    /* Establece la altura m�nima del elemento en 225 px, asegurando que, aunque el contenido no sea suficiente para alcanzar esa altura, el elemento nunca se mostrará con una altura menor a 225 px. */
-    height: calc(500px*1.5);
-    overflow: hidden;
-    /* Se oculta el contenido que sobresale m�s all� de los l�m del contenedor. */
+.room-footer {
+  padding: 2rem 2rem 3.5rem 2rem;
+  color: rgb(236, 232, 225);
+  transition: all 0.3s ease;
 }
 
-
-/* Estilo para las imgs los cuartos m�s pedidos */
-.room-item-img-v2 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Se utiliza para ajustar el tama�o del elemento para que llene completamente el contenedor. */
-    -o-object-fit: cover;
-    /* Para que se pueda visualizar en Opera */
+.room-footer h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-/* Estilo para el detalle de los cuartos m�s pedidos */
-.room-item-detail-v2 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.card-footer span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--third-color);
 }
 
-/* Estilo para el t�tulo de los cuartos m�s pedidos*/
-.room-item-detail-title-v2 {
-    color: white;
-    font-weight: bold;
-    margin: 5px 0px 0px 0px;
+.card-footer p {
+  font-size: 1.5rem;
+  line-height: 25px;
 }
 
-/* Estilo para el subt�tulo de los cuartos m�s pedidos*/
-.room-item-detail-subtitle-v2 {
-    color: white;
-    font-size: 12px;
-    margin: 3px 0px;
+.reservar {
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
 }
 
-
-/* Hover para el bot�n de Reservas*/
-.btn-room:hover {
-    color: var(--primary-color) !important;
-    border: 2px solid var(--bg-color);
+.reservar span {
+  display: block;
+  margin-left: 0.4rem;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
 }
 
-
-/* Estilos con selectores descendientes para las etiquetas de t�tulo y subt�tulo del banner */
-.card-recoleta h1 {
-    color: #FFF;
-    font-size: 4vw;
+.room:hover .reservar{
+  color: rgb(56, 62, 58);
+}
+.room:hover .reservar span {
+  transform: translateX(5px);
+}
+.room:hover .image-container::before {
+  transform: translateX(0) skewX(-10deg) scaleX(1.3);
 }
 
-.card-recoleta h2 {
-    margin-bottom: 20px;
+.room:hover .room-footer {
+  background: #ffffff;
+  color: rgb(56, 62, 58);
 }
 
-/* Estilo para los cuartos q son m�s pedidos */
-.room-item {
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    cursor: pointer;
-    }
-    /* height: 300px;
-    display: inline-block;
-    font-size: 20px;
-    transition: all 450ms;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
-
-/* Estilo para la superposición */
-.room-item::before {
-    content: ''; /* Contenido generado antes del contenido real */
-    position: absolute;
-    bottom: 0; /* Desde abajo de la imagen */
-    left: 0;
-    width: 100%;
-    height: 50%; /* Altura inicial cero */
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo gris con opacidad */
-    transition: height 0.3s; /* Transición suave para el cambio de altura */
-    pointer-events: none; /* Asegura que la superposición no bloquee los eventos del mouse */
+.room:hover span {
+  color: var(--primary-color);
 }
 
-
-
-/* Estilo para el texto "Recoleta" cuando se pasa el mouse sobre la habitación */
-.room-item:hover .room-item-detail-title {
-    opacity: 1; /* Mostrar el texto */
+.room::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #090136 50%, rgb(56, 62, 58) 50%);
+  background-size: 300%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  transition: all 0.5s;
 }
 
-/* Estilo para el hover */
-.room-item:hover::before {
-    height: 0; /* Revertir el cambio de altura de la superposición al hacer hover */
+.room:hover::before {
+  background-position: 0%;
 }
 
-/* Acá termina Estilo para el texto "Recoleta" */
-/* Estilo que se activa al pasar el cursor del mouse sobre el item */
-/* .room-item:hover cuando el cursor está sobre un elemento con la clase .room-item, se aplica una opacidad del 90% (0.9), lo que hace que el elemento se vuelva un poco más transparente. */
-.room-item:hover {
-    opacity: 0.9;
-}
-
-/* Cambia la posici�n vertical (bottom) del elemento .room-item-detail, movi�ndolo hacia abajo, para revelar m�s informaci�n o detalles sobre el elemento de la suite. 
-.room-item:hover .room-item-detail {
-    bottom: 0;
-}*/
-
-/* Agrega contenido adicional a un elemento */
-.room-item-detail-subtitle::after {
-    content: '';
-}
-
-
-/* Estilo para cambiar el color que se muestran en los cuartos m�s pedidos */
-.room-item-detail-title-v2:hover {
-    color: var(--primary-color);
-}
-
-/* Agrega contenido adicional a un elemento */
-.room-item-detail-subtitle-v2::after {
-    content: '';
+.room .room-png img {
+  max-width: 200px; /* Ajusta el tamaño máximo de la imagen según sea necesario */
+  height: auto;
 }
 
 
@@ -540,86 +171,33 @@ h2 {
 /* Media Queries para dispositivos */
 /* TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    h2 {
-        font-size: 3vw;
-    }
+  
 
-    .login-text {
-        display: none;
-    }
+  #suites {
+      height: 400px;
+  }
 
-    .logo-text {
-        display: none;
-    }
+ 
 
-    #recoleta {
-        height: 400px;
-    }
-
-    #search {
-        height: 200px;
-    }
-
-    .container {
-        max-width: 720px;
-    }
-
-    .card-recoleta {
-        padding: 0px 75px;
-    }
-
-    #footer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .container {
+      max-width: 720px;
+  }
 }
+  
 
 /* CELULARES */
 @media screen and (max-width: 767px) {
-    h2 {
-        font-size: 3vw;
-    }
+  
 
-    .h2-subtitle {
-        font-size: 5vw;
-    }
+  #suites {
+      height: 300px;
+  }
 
-    .login-text {
-        display: none;
-    }
+ 
 
-    .logo-text {
-        display: none;
-    }
+  .container {
+      max-width: 420px;
+  }
 
-    #recoleta {
-        height: 300px;
-    }
-
-    #search {
-        height: 200px;
-    }
-
-    .container {
-        max-width: 420px;
-    }
-
-    .card-recoleta {
-        padding: 0px 50px;
-    }
-
-    .btn-rooms {
-        font-size: 1vh;
-    }
-
-    #footer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footer a {
-        padding: 2px 0px;
-    }
+ 
 }
