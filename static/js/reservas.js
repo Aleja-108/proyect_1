@@ -41,6 +41,12 @@ form.addEventListener("submit", e => {
         faltan_datos = true;
     }
 
+    else if (!/^\d+$/.test(Telefono.value)) {
+        warnings = 'El teléfono solo puede contener números.';
+        faltan_datos = true;
+    }
+
+
     if (!regex.test(mail.value)) {
         warnings = "El mail ingresado no es valido."
         faltan_datos = true;
@@ -59,18 +65,20 @@ form.addEventListener("submit", e => {
     }
 
 // Validación de fechas
-if (fecha_ingreso.value && fecha_salida.value) {
-    const ingresoDate = new Date(fecha_ingreso.value);
-    const salidaDate = new Date(fecha_salida.value);
+    if (fecha_ingreso.value && fecha_salida.value) {
+        const ingresoDate = new Date(fecha_ingreso.value);
+        const salidaDate = new Date(fecha_salida.value);
 
-    if (salidaDate <= ingresoDate) {
-        warnings += 'La fecha de salida debe ser posterior a la fecha de ingreso.<br>';
+        if (salidaDate <= ingresoDate) {
+            warnings += 'La fecha de salida debe ser posterior a la fecha de ingreso.<br>';
+            faltan_datos = true;
+        }
+    } 
+    
+    else {
+        warnings += 'Debe ingresar ambas fechas.<br>';
         faltan_datos = true;
     }
-} else {
-    warnings += 'Debe ingresar ambas fechas.<br>';
-    faltan_datos = true;
-}
 
 
 
@@ -87,3 +95,12 @@ if (fecha_ingreso.value && fecha_salida.value) {
 
     }
 })
+
+window.onscroll = function() {
+    var btn = document.getElementById('btn-volver-inicio');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = 'block';
+    } else {
+    btn.style.display = 'none';
+    }
+};
