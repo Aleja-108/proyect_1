@@ -22,12 +22,12 @@ form.addEventListener("submit", e => {
     parrafo.innerHTML = ""
 
     if (nombre.value.length == 0) {
-        warnings = 'Debe su nombre.'
+        warnings = 'Debe ingresar su nombre.'
         faltan_datos = true;
     }
 
     if (dni.value.length < 8) {
-        warnings = 'El DNI ingreso no es valido.'
+        warnings = 'El DNI ingresado no es valido.'
         faltan_datos = true;
     }
 
