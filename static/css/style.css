@@ -810,3 +810,10 @@ a:hover {
 .maps-links.footer-section {
   grid-row: 6; /* Asignar a la última fila */
   }
+
+
+iframe {
+  width: 100%;
+  height: 600px;
+  margin: 50px;
+}
