@@ -40,6 +40,10 @@
     padding: 10px;
 }
 
+.garamond-title {
+    font-family: 'Garamond', serif;
+}
+
 /* forumuario */
 
 .formulario_contenedor {
